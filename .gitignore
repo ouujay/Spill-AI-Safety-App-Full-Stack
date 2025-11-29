@@ -1,0 +1,247 @@
+# =====================================================
+# SPILL AI Safety App - .gitignore
+# =====================================================
+
+# =====================================================
+# SENSITIVE FILES - CRITICAL
+# =====================================================
+# Environment variables (contains API keys, passwords, etc.)
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# Secret keys and credentials
+*.pem
+*.key
+*.p12
+*.p8
+*.jks
+*.mobileprovision
+serviceAccount*.json
+google-services.json
+GoogleService-Info.plist
+firebase*.json
+
+# =====================================================
+# PYTHON
+# =====================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+tfenv/
+*/tfenv/
+*/venv/
+*/env/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Django
+*.log
+*.pot
+*.sqlite3
+db.sqlite3
+local_settings.py
+staticfiles/
+media/
+logs/
+
+# Flask
+instance/
+.webassets-cache
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# =====================================================
+# JAVASCRIPT / NODE.JS
+# =====================================================
+node_modules/
+*/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Package manager lock files (uncomment if you want to track)
+# package-lock.json
+# yarn.lock
+
+# =====================================================
+# REACT NATIVE / EXPO
+# =====================================================
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Metro
+.metro-health-check*
+
+# Native build folders
+*.orig.*
+.kotlin/
+android/.gradle/
+android/app/build/
+ios/Pods/
+ios/build/
+
+# Xcode
+*.xcworkspace
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+DerivedData/
+*.hmap
+*.ipa
+*.xcuserstate
+*.xcscmblueprint
+
+# Android
+*.apk
+*.aab
+*.dex
+*.class
+*.ap_
+*.iml
+.gradle/
+local.properties
+proguard/
+
+# =====================================================
+# IDE / EDITORS
+# =====================================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+.project
+.classpath
+.settings/
+*.code-workspace
+
+# =====================================================
+# OS FILES
+# =====================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+*.bak
+*.tmp
+*.temp
+
+# =====================================================
+# MISC
+# =====================================================
+# TypeScript
+*.tsbuildinfo
+
+# Testing
+.nyc_output
+
+# Logs
+*.log
+logs/
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Build outputs
+*.bundle.js
+*.bundle.js.map
+
+# Claude Code
+.claude/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp

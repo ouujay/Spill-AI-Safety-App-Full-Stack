@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delete Your Account - Spill</title>
+  <meta name="description" content="Delete your Spill account and all associated data. We respect your privacy and give you full control over your information.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Ultra&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+
+    :root{
+      --primary-purple:#6b0fa3;
+      --deep-purple:#4a0e6b;
+      --dark-purple:#2d0640;
+      --accent-pink:#d946ef;
+      --light-purple:#a855f7;
+      --page:#ffffff;
+      --band:#fafafa;
+      --text:#111111;
+      --muted:#444444;
+      --border:#eaeaea;
+      --shadow:0 10px 30px rgba(0,0,0,.06);
+      --warning:#ef4444;
+      --warning-light:#fef2f2;
+      --success:#22c55e;
+    }
+
+    body{
+      font-family:'Open Sans',sans-serif;
+      line-height:1.6;
+      color:var(--text);
+      background:var(--page);
+      overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .container{max-width:1400px;margin:0 auto;padding:0 24px}
+
+    /* ========== NAVIGATION ========== */
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:1000;
+      background:#fff;
+      backdrop-filter:saturate(120%) blur(10px);
+      padding:20px 0;
+      transition:all .25s ease;
+      border-bottom:1px solid var(--border);
+      box-shadow:var(--shadow);
+    }
+    .nav-container{display:flex;justify-content:space-between;align-items:center}
+    .logo{
+      display:flex;align-items:center;gap:16px;
+      font-size:36px;font-family:'Gravitas One',cursive;
+      background:linear-gradient(135deg,var(--primary-purple),var(--accent-pink));
+      -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+      text-decoration:none;letter-spacing:2px;transition:transform .3s ease
+    }
+    .logo:hover{transform:scale(1.03)}
+    .logo img{width:48px;height:48px;border-radius:12px;box-shadow:0 4px 20px rgba(217,70,239,.25)}
+
+    .back-button{
+      display:inline-flex;align-items:center;gap:8px;
+      color:var(--muted);text-decoration:none;font-weight:600;
+      transition:all .25s ease;padding:8px 16px;border-radius:8px;
+    }
+    .back-button:hover{
+      color:var(--primary-purple);
+      background:var(--band);
+      transform:translateX(-4px);
+    }
+
+    /* ========== DELETE ACCOUNT PAGE ========== */
+    .delete-hero{
+      padding:140px 0 60px;
+      background:linear-gradient(135deg,var(--warning) 0%,#dc2626 55%,#b91c1c 100%);
+      color:#fff;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .delete-hero::before{
+      content:'';
+      position:absolute;
+      top:-20%;
+      right:-20%;
+      width:40%;
+      height:140%;
+      background:radial-gradient(circle at center, rgba(255,255,255,.1) 0%, transparent 70%);
+      border-radius:50%;
+      animation:float 25s ease-in-out infinite;
+      filter:blur(40px);
+    }
+    @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(2deg)}}
+
+    .delete-hero h1{
+      font-size:clamp(40px,6vw,56px);
+      font-family:'Ultra',serif;
+      margin-bottom:16px;
+      letter-spacing:-1px;
+    }
+    .delete-hero p{
+      font-size:18px;
+      opacity:.95;
+      max-width:600px;
+      margin:0 auto;
+      line-height:1.75;
+    }
+
+    .delete-content{
+      padding:80px 0;
+      background:#fff;
+    }
+    .delete-container{
+      max-width:800px;
+      margin:0 auto;
+      padding:0 24px;
+    }
+
+    .warning-notice{
+      background:var(--warning-light);
+      border-left:4px solid var(--warning);
+      border-radius:12px;
+      padding:24px 28px;
+      margin-bottom:40px;
+      position:relative;
+    }
+    .warning-notice h3{
+      color:var(--warning);
+      font-size:18px;
+      font-weight:700;
+      margin-bottom:8px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .warning-notice p{
+      color:#991b1b;
+      font-size:15px;
+      line-height:1.6;
+    }
+
+    .section-card{
+      background:#fff;
+      border-radius:20px;
+      padding:32px;
+      margin-bottom:32px;
+      box-shadow:var(--shadow);
+      border:1px solid var(--border);
+      position:relative;
+      overflow:hidden;
+    }
+    .section-card::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      height:4px;
+      background:linear-gradient(90deg,var(--accent-pink),var(--primary-purple),var(--light-purple));
+    }
+
+    .section-title{
+      font-size:24px;
+      font-family:'Ultra',serif;
+      margin-bottom:20px;
+      color:var(--primary-purple);
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .section-icon{
+      width:32px;
+      height:32px;
+      background:var(--primary-purple);
+      color:#fff;
+      border-radius:8px;
+      display:grid;
+      place-items:center;
+      font-size:16px;
+    }
+
+    .contact-info{
+      background:var(--band);
+      border-radius:16px;
+      padding:24px;
+      text-align:center;
+      margin:24px 0;
+      border:1px solid var(--border);
+    }
+    .contact-email{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      background:var(--primary-purple);
+      color:#fff;
+      padding:16px 24px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:16px;
+      transition:all .3s ease;
+      box-shadow:0 10px 30px rgba(107,15,163,.25);
+    }
+    .contact-email:hover{
+      transform:translateY(-2px);
+      box-shadow:0 16px 40px rgba(107,15,163,.35);
+      background:var(--deep-purple);
+    }
+
+    .requirements-list{
+      list-style:none;
+      padding:0;
+      margin:20px 0;
+    }
+    .requirements-list li{
+      padding:12px 0;
+      border-bottom:1px solid var(--border);
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+    }
+    .requirements-list li:last-child{
+      border-bottom:none;
+    }
+    .list-number{
+      width:24px;
+      height:24px;
+      background:var(--primary-purple);
+      color:#fff;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      font-size:12px;
+      font-weight:700;
+      flex-shrink:0;
+      margin-top:2px;
+    }
+    .list-content{
+      flex:1;
+    }
+    .list-title{
+      font-weight:600;
+      color:var(--text);
+      margin-bottom:4px;
+    }
+    .list-description{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    .process-steps{
+      background:var(--band);
+      border-radius:16px;
+      padding:24px;
+      margin:24px 0;
+    }
+    .process-steps h4{
+      font-size:16px;
+      font-weight:700;
+      margin-bottom:16px;
+      color:var(--primary-purple);
+    }
+    .step{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:8px 0;
+      font-size:14px;
+    }
+    .step-icon{
+      width:20px;
+      height:20px;
+      background:var(--success);
+      color:#fff;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      font-size:12px;
+    }
+
+    .data-info{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      margin:24px 0;
+    }
+    .data-column{
+      background:var(--band);
+      border-radius:16px;
+      padding:20px;
+      border:1px solid var(--border);
+    }
+    .data-column h4{
+      font-size:16px;
+      font-weight:700;
+      margin-bottom:12px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .data-column.deleted h4{
+      color:var(--warning);
+    }
+    .data-column.retained h4{
+      color:var(--muted);
+    }
+    .data-column ul{
+      list-style:none;
+      padding:0;
+    }
+    .data-column li{
+      padding:4px 0;
+      font-size:14px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .data-column li::before{
+      content:'•';
+      color:currentColor;
+      font-weight:bold;
+    }
+
+    .support-section{
+      background:linear-gradient(135deg,var(--band),#fff);
+      border-radius:20px;
+      padding:32px;
+      text-align:center;
+      margin-top:40px;
+      border:1px solid var(--border);
+    }
+    .support-section h3{
+      font-size:20px;
+      font-family:'Ultra',serif;
+      margin-bottom:12px;
+      color:var(--primary-purple);
+    }
+    .support-section p{
+      color:var(--muted);
+      margin-bottom:20px;
+      line-height:1.6;
+    }
+    .support-links{
+      display:flex;
+      justify-content:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    .support-link{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:#fff;
+      color:var(--primary-purple);
+      padding:12px 20px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+      transition:all .25s ease;
+      border:1px solid var(--border);
+      box-shadow:0 4px 14px rgba(0,0,0,.04);
+    }
+    .support-link:hover{
+      transform:translateY(-2px);
+      box-shadow:0 8px 24px rgba(0,0,0,.08);
+      color:var(--deep-purple);
+    }
+
+    /* ========== FOOTER ========== */
+    .footer{
+      background:#fff;
+      color:#222;
+      padding:60px 0 40px;
+      text-align:center;
+      border-top:1px solid var(--border);
+    }
+    .footer-logo{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:16px;
+      margin-bottom:24px;
+      font-size:28px;
+      font-family:'Gravitas One',cursive;
+      background:linear-gradient(135deg,var(--primary-purple),var(--accent-pink));
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    .footer-logo img{
+      width:40px;
+      height:40px;
+      border-radius:8px;
+      box-shadow:0 4px 20px rgba(217,70,239,.25);
+    }
+    .footer-links{
+      display:flex;
+      justify-content:center;
+      gap:28px;
+      margin-bottom:22px;
+      flex-wrap:wrap;
+    }
+    .footer-links a{
+      color:#333;
+      text-decoration:none;
+      transition:all .25s ease;
+      font-family:'Open Sans',sans-serif;
+    }
+    .footer-links a:hover{
+      color:var(--primary-purple);
+      transform:translateY(-1px);
+    }
+    .footer-bottom{
+      border-top:1px solid var(--border);
+      padding-top:16px;
+      color:#666;
+      font-size:13px;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width:768px){
+      .delete-content{padding:60px 0}
+      .section-card{padding:24px 20px}
+      .data-info{grid-template-columns:1fr;gap:16px}
+      .support-links{flex-direction:column;align-items:center}
+      .nav{padding:15px 0}
+      .logo{font-size:28px}
+      .logo img{width:36px;height:36px}
+      .delete-hero{padding:120px 0 50px}
+    }
+    @media (max-width:480px){
+      .container,.delete-container{padding:0 20px}
+      .section-card{padding:20px 16px}
+      .contact-info{padding:20px 16px}
+      .requirements-list li{flex-direction:column;align-items:flex-start;gap:8px}
+      .list-number{margin-top:0}
+    }
+
+    ::-webkit-scrollbar{width:10px}
+    ::-webkit-scrollbar-track{background:#fff}
+    ::-webkit-scrollbar-thumb{background:linear-gradient(135deg,var(--primary-purple),var(--accent-pink));border-radius:5px}
+    ::-webkit-scrollbar-thumb:hover{background:linear-gradient(135deg,var(--accent-pink),var(--primary-purple))}
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-container">
+        <a class="logo" href="index.html">
+          <img src="assets/logo.png" alt="Spill Logo"> Spill
+        </a>
+        <a href="index.html" class="back-button">
+          ← Back to Home
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- DELETE ACCOUNT HERO -->
+  <section class="delete-hero">
+    <div class="container">
+      <h1>Delete Your Account</h1>
+      <p>We respect your privacy and give you full control over your data. If you would like to permanently delete your account and all associated data, follow the steps below.</p>
+    </div>
+  </section>
+
+  <!-- DELETE CONTENT -->
+  <section class="delete-content">
+    <div class="delete-container">
+      
+      <!-- Warning Notice -->
+      <div class="warning-notice">
+        <h3>⚠️ Important Notice</h3>
+        <p>Account deletion is permanent and cannot be undone. All your data will be permanently removed from our servers.</p>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="section-card">
+        <h2 class="section-title">
+          <div class="section-icon">📧</div>
+          Contact Us to Delete Your Account
+        </h2>
+        <p>To permanently delete your account and all associated data, please send an email to:</p>
+        
+        <div class="contact-info">
+          <a href="mailto:orderingpau@gmail.com?subject=Account Deletion Request" class="contact-email">
+            📧 orderingpau@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Requirements -->
+      <div class="section-card">
+        <h2 class="section-title">
+          <div class="section-icon">📋</div>
+          What to Include in Your Request
+        </h2>
+        <p>When you email us, please provide the following information:</p>
+        
+        <ul class="requirements-list">
+          <li>
+            <div class="list-number">1</div>
+            <div class="list-content">
+              <div class="list-title">Email Address</div>
+              <div class="list-description">The email address you used to register your account</div>
+            </div>
+          </li>
+          <li>
+            <div class="list-number">2</div>
+            <div class="list-content">
+              <div class="list-title">Full Name or Username</div>
+              <div class="list-description">Your full name or username (if applicable)</div>
+            </div>
+          </li>
+          <li>
+            <div class="list-number">3</div>
+            <div class="list-content">
+              <div class="list-title">Deletion Statement</div>
+              <div class="list-description">"I request my account and all associated data to be permanently deleted."</div>
+            </div>
+          </li>
+          <li>
+            <div class="list-number">4</div>
+            <div class="list-content">
+              <div class="list-title">Profile Screenshot (Optional)</div>
+              <div class="list-description">You may attach a screenshot of your logged-in profile to help us confirm your request faster</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Process -->
+      <div class="section-card">
+        <h2 class="section-title">
+          <div class="section-icon">⚡</div>
+          What Happens Next
+        </h2>
+        
+        <div class="process-steps">
+          <h4>Our Process:</h4>
+          <div class="step">
+            <div class="step-icon">✓</div>
+            We will verify your identity using the email address provided
+          </div>
+          <div class="step">
+            <div class="step-icon">✓</div>
+            Once verified, we will permanently delete your account and all associated data
+          </div>
+          <div class="step">
+            <div class="step-icon">✓</div>
+            You will receive a confirmation email once deletion is complete
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Information -->
+      <div class="section-card">
+        <h2 class="section-title">
+          <div class="section-icon">🗂️</div>
+          Data Handling
+        </h2>
+        
+        <div class="data-info">
+          <div class="data-column deleted">
+            <h4>🗑️ Data That Will Be Deleted</h4>
+            <ul>
+              <li>Your profile and account details</li>
+              <li>Posts, comments, and replies you've created</li>
+              <li>Any uploaded media (images, videos)</li>
+              <li>Personal preferences and settings</li>
+              <li>Chat history and messages</li>
+            </ul>
+          </div>
+          
+          <div class="data-column retained">
+            <h4>📝 Data That May Be Retained</h4>
+            <ul>
+              <li>Transaction or audit logs (legal compliance)</li>
+              <li>Anonymized analytics data</li>
+              <li>Data required for security purposes</li>
+            </ul>
+            <p style="font-size:12px;color:var(--muted);margin-top:12px;">
+              These records are not linked to your active account once deleted.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Support Section -->
+      <div class="support-section">
+        <h3>Need Help or Have Questions?</h3>
+        <p>If you're experiencing issues or just need support, we're here to help before you decide to delete your account.</p>
+        
+        <div class="support-links">
+          <a href="index.html#features" class="support-link">
+            💬 Contact Support
+          </a>
+          <a href="privacy.html" class="support-link">
+            🔒 Privacy Policy
+          </a>
+          <a href="index.html" class="support-link">
+            🏠 Back to Home
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="assets/logo.png" alt="Spill Logo"> Spill
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Spill. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Email link with pre-filled subject
+    document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+      if (!link.href.includes('subject=')) {
+        const email = link.href.replace('mailto:', '');
+        link.href = `mailto:${email}?subject=Account Deletion Request&body=Hello Spill Team,%0D%0A%0D%0AI request my account and all associated data to be permanently deleted.%0D%0A%0D%0AEmail address used for registration: [YOUR EMAIL]%0D%0AFull name/username: [YOUR NAME]%0D%0A%0D%0AThank you.`;
+      }
+    });
+  </script>
+</body>
+</html>

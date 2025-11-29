@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy - Spill</title>
+  <meta name="description" content="Spill Privacy Policy - Learn how we protect your data and privacy in our anonymous Nigerian women's community platform.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Poiret+One&family=Ultra&family=Vidaloka&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+
+    :root{
+      --primary-purple:#6b0fa3;
+      --deep-purple:#4a0e6b;
+      --dark-purple:#2d0640;
+      --black:#0a0a0a;
+      --accent-pink:#d946ef;
+      --light-purple:#a855f7;
+      --page:#ffffff;
+      --band:#fafafa;
+      --text:#111111;
+      --muted:#444444;
+      --border:#eaeaea;
+      --shadow:0 10px 30px rgba(0,0,0,.06);
+    }
+
+    body{
+      font-family:'Open Sans',sans-serif;
+      line-height:1.6;
+      color:var(--text);
+      background:var(--page);
+      overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .container{max-width:1400px;margin:0 auto;padding:0 24px}
+
+    /* ========== NAV (same as main site) ========== */
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:1000;
+      background:#fff;
+      backdrop-filter:saturate(120%) blur(10px);
+      padding:20px 0;
+      transition:all .25s ease;
+      border-bottom:1px solid var(--border);
+      box-shadow:none;
+    }
+    .nav.scrolled{
+      padding:15px 0;
+      box-shadow:var(--shadow);
+    }
+    .nav-container{display:flex;justify-content:space-between;align-items:center}
+    .logo{
+      display:flex;align-items:center;gap:16px;
+      font-size:36px;font-family:'Gravitas One',cursive;
+      background:linear-gradient(135deg,var(--primary-purple),var(--accent-pink));
+      -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+      text-decoration:none;letter-spacing:2px;transition:transform .3s ease
+    }
+    .logo:hover{transform:scale(1.03)}
+    .logo img{width:48px;height:48px;border-radius:12px;box-shadow:0 4px 20px rgba(217,70,239,.25)}
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:32px;
+    }
+    .nav-link{
+      color:var(--text);
+      text-decoration:none;
+      font-family:'Open Sans',sans-serif;
+      font-weight:600;
+      font-size:15px;
+      transition:all .25s ease;
+      position:relative;
+    }
+    .nav-link:hover{
+      color:var(--primary-purple);
+      transform:translateY(-1px);
+    }
+    .nav-link::after{
+      content:'';
+      position:absolute;
+      bottom:-4px;
+      left:0;
+      width:0;
+      height:2px;
+      background:linear-gradient(135deg,var(--accent-pink),var(--primary-purple));
+      transition:width .3s ease;
+    }
+    .nav-link:hover::after{
+      width:100%;
+    }
+
+    .social-icon{
+      width:44px;
+      height:44px;
+      display:grid;
+      place-items:center;
+      border:1px solid var(--border);
+      border-radius:12px;
+      background:#fff;
+      color:var(--primary-purple);
+      box-shadow:0 4px 14px rgba(0,0,0,.06);
+      text-decoration:none;
+      transition:transform .2s ease, box-shadow .2s ease, color .2s ease, border-color .2s ease;
+    }
+    .social-icon:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 24px rgba(0,0,0,.10);
+      color:var(--deep-purple);
+      border-color:#ddd;
+    }
+
+    /* ========== PRIVACY PAGE STYLES ========== */
+    .privacy-hero{
+      padding:140px 0 80px;
+      background:linear-gradient(135deg,var(--deep-purple) 0%,var(--primary-purple) 55%,var(--accent-pink) 100%);
+      color:#fff;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .privacy-hero::before{
+      content:'';
+      position:absolute;
+      top:-20%;
+      right:-20%;
+      width:40%;
+      height:140%;
+      background:radial-gradient(circle at center, rgba(255,255,255,.1) 0%, transparent 70%);
+      border-radius:50%;
+      animation:float 25s ease-in-out infinite;
+      filter:blur(40px);
+    }
+    @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(2deg)}}
+
+    .privacy-hero h1{
+      font-size:clamp(40px,6vw,64px);
+      font-family:'Ultra',serif;
+      margin-bottom:16px;
+      letter-spacing:-1px;
+    }
+    .privacy-hero p{
+      font-size:20px;
+      opacity:.95;
+      max-width:600px;
+      margin:0 auto;
+      line-height:1.75;
+    }
+
+    .privacy-content{
+      padding:80px 0;
+      background:#fff;
+    }
+    .privacy-container{
+      max-width:900px;
+      margin:0 auto;
+      padding:0 24px;
+    }
+
+    .last-updated{
+      background:var(--band);
+      border-radius:16px;
+      padding:20px 28px;
+      margin-bottom:48px;
+      border-left:4px solid var(--primary-purple);
+    }
+    .last-updated strong{
+      color:var(--primary-purple);
+      font-weight:700;
+    }
+
+    .privacy-intro{
+      background:#fff;
+      border-radius:20px;
+      padding:40px;
+      box-shadow:var(--shadow);
+      border:1px solid var(--border);
+      margin-bottom:48px;
+      position:relative;
+      overflow:hidden;
+    }
+    .privacy-intro::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      height:4px;
+      background:linear-gradient(90deg,var(--accent-pink),var(--primary-purple),var(--light-purple));
+    }
+    .privacy-intro p{
+      font-size:16px;
+      line-height:1.8;
+      color:#333;
+      margin-bottom:16px;
+    }
+    .privacy-intro p:last-child{
+      margin-bottom:0;
+    }
+
+    .table-of-contents{
+      background:var(--band);
+      border-radius:20px;
+      padding:32px;
+      margin-bottom:48px;
+      border:1px solid var(--border);
+    }
+    .table-of-contents h2{
+      font-size:24px;
+      font-family:'Ultra',serif;
+      margin-bottom:20px;
+      color:var(--primary-purple);
+    }
+    .toc-list{
+      list-style:none;
+      padding:0;
+    }
+    .toc-list li{
+      margin-bottom:8px;
+    }
+    .toc-list a{
+      color:#333;
+      text-decoration:none;
+      font-weight:500;
+      transition:all .25s ease;
+      display:block;
+      padding:8px 12px;
+      border-radius:8px;
+    }
+    .toc-list a:hover{
+      background:#fff;
+      color:var(--primary-purple);
+      transform:translateX(8px);
+    }
+
+    .privacy-section{
+      background:#fff;
+      border-radius:20px;
+      padding:40px;
+      margin-bottom:32px;
+      box-shadow:var(--shadow);
+      border:1px solid var(--border);
+    }
+    .privacy-section h2{
+      font-size:28px;
+      font-family:'Ultra',serif;
+      margin-bottom:20px;
+      color:var(--primary-purple);
+      letter-spacing:-.5px;
+    }
+    .privacy-section h3{
+      font-size:22px;
+      font-family:'Ultra',serif;
+      margin:24px 0 16px;
+      color:var(--deep-purple);
+    }
+    .privacy-section h4{
+      font-size:18px;
+      font-weight:700;
+      margin:20px 0 12px;
+      color:#333;
+    }
+    .privacy-section p{
+      font-size:16px;
+      line-height:1.8;
+      margin-bottom:16px;
+      color:#333;
+    }
+    .privacy-section ul, .privacy-section ol{
+      margin:16px 0 16px 24px;
+    }
+    .privacy-section li{
+      margin-bottom:8px;
+      line-height:1.7;
+    }
+    .privacy-section strong{
+      color:var(--primary-purple);
+      font-weight:700;
+    }
+
+    .contact-section{
+      background:linear-gradient(135deg,var(--band),#fff);
+      border-radius:20px;
+      padding:40px;
+      text-align:center;
+      border:1px solid var(--border);
+      position:relative;
+      overflow:hidden;
+    }
+    .contact-section::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      height:4px;
+      background:linear-gradient(90deg,var(--accent-pink),var(--primary-purple),var(--light-purple));
+    }
+    .contact-section h2{
+      font-size:28px;
+      font-family:'Ultra',serif;
+      margin-bottom:16px;
+      color:var(--primary-purple);
+    }
+    .contact-section p{
+      font-size:16px;
+      line-height:1.8;
+      margin-bottom:24px;
+      color:#333;
+    }
+    .contact-phone{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      background:var(--primary-purple);
+      color:#fff;
+      padding:16px 24px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:600;
+      transition:all .3s ease;
+      box-shadow:0 10px 30px rgba(107,15,163,.25);
+    }
+    .contact-phone:hover{
+      transform:translateY(-2px);
+      box-shadow:0 16px 40px rgba(107,15,163,.35);
+      background:var(--deep-purple);
+    }
+
+    /* ========== FOOTER ========== */
+    .footer{
+      background:#fff;
+      color:#222;
+      padding:60px 0 40px;
+      text-align:center;
+      border-top:1px solid var(--border);
+    }
+    .footer-logo{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:16px;
+      margin-bottom:24px;
+      font-size:28px;
+      font-family:'Gravitas One',cursive;
+      background:linear-gradient(135deg,var(--primary-purple),var(--accent-pink));
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    .footer-logo img{
+      width:40px;
+      height:40px;
+      border-radius:8px;
+      box-shadow:0 4px 20px rgba(217,70,239,.25);
+    }
+    .footer-links{
+      display:flex;
+      justify-content:center;
+      gap:28px;
+      margin-bottom:22px;
+      flex-wrap:wrap;
+    }
+    .footer-links a{
+      color:#333;
+      text-decoration:none;
+      transition:all .25s ease;
+      font-family:'Open Sans',sans-serif;
+      position:relative;
+    }
+    .footer-links a:hover{
+      color:#000;
+      transform:translateY(-1px);
+    }
+    .footer-bottom{
+      border-top:1px solid var(--border);
+      padding-top:16px;
+      color:#666;
+      font-size:13px;
+      font-family:'Open Sans',sans-serif;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width:968px){
+      .nav-links{
+        display:none;
+      }
+      .privacy-content{
+        padding:60px 0;
+      }
+      .privacy-section, .privacy-intro{
+        padding:28px 24px;
+      }
+      .table-of-contents{
+        padding:24px 20px;
+      }
+      .contact-section{
+        padding:32px 24px;
+      }
+    }
+    @media (max-width:640px){
+      .container, .privacy-container{
+        padding:0 20px;
+      }
+      .privacy-hero{
+        padding:120px 0 60px;
+      }
+      .privacy-section, .privacy-intro{
+        padding:24px 20px;
+      }
+      .table-of-contents{
+        padding:20px 16px;
+      }
+      .contact-section{
+        padding:28px 20px;
+      }
+      .privacy-section h2{
+        font-size:24px;
+      }
+      .privacy-section h3{
+        font-size:20px;
+      }
+      
+      /* Make nav responsive */
+      .logo{
+        font-size:28px;
+      }
+      .logo img{
+        width:36px;
+        height:36px;
+      }
+      .social-icon{
+        width:38px;
+        height:38px;
+      }
+      .social-icon svg{
+        width:18px;
+        height:18px;
+      }
+    }
+
+    /* Light scrollbar */
+    ::-webkit-scrollbar{width:10px}
+    ::-webkit-scrollbar-track{background:#fff}
+    ::-webkit-scrollbar-thumb{background:linear-gradient(135deg,var(--primary-purple),var(--accent-pink));border-radius:5px}
+    ::-webkit-scrollbar-thumb:hover{background:linear-gradient(135deg,var(--accent-pink),var(--primary-purple))}
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="container">
+      <div class="nav-container">
+        <a class="logo" href="index.html">
+          <img src="assets/logo.png" alt="Spill Logo"> Spill
+        </a>
+        
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="index.html#founder" class="nav-link">Founder</a>
+          <a href="index.html#features" class="nav-link">Features</a>
+          <a href="index.html#how" class="nav-link">How It Works</a>
+          <a href="privacy.html" class="nav-link">Privacy</a>
+        </div>
+        
+        <!-- Instagram Icon -->
+        <a
+          class="social-icon"
+          href="https://www.instagram.com/spill.ng"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
+            <path d="M16 2H8a6 6 0 0 0-6 6v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Z" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="12" cy="12" r="3.6" stroke="currentColor" stroke-width="1.6"/>
+            <circle cx="17.35" cy="6.65" r="1.2" fill="currentColor"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PRIVACY HERO -->
+  <section class="privacy-hero">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p>Your privacy and security are our top priorities. Learn how we protect your data in our anonymous Nigerian women's community.</p>
+    </div>
+  </section>
+
+  <!-- PRIVACY CONTENT -->
+  <section class="privacy-content">
+    <div class="privacy-container">
+      
+      <!-- Last Updated -->
+      <div class="last-updated">
+        <p><strong>Effective Date:</strong> January 15, 2025</p>
+      </div>
+
+      <!-- Introduction -->
+      <div class="privacy-intro">
+        <p>This Privacy Notice ("Notice") details the types of personal information that Spill, Inc. ("Spill," "Company," "We," "Our") may collect, process, and/or disclose when you access, use, or signup for an account with the "Spill" mobile application (the "Spill app") or visit the Spill website, <a href="https://spillforwomen.netlify.app/" style="color: var(--primary-purple);">https://spillforwomen.netlify.app/</a> (the "Website"), (collectively the "Services") and our practices for processing that personal information.</p>
+        
+        <p>Please read this Notice carefully to understand our policies and practices regarding your personal information. By using or registering with our Services, you acknowledge that your personal information will be collected, used, processed and disclosed as outlined in this Privacy Notice.</p>
+        
+        <p><strong>Nigerian residents</strong> can find more information about their specific privacy rights in the Additional Information sections below.</p>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="table-of-contents">
+        <h2>Table of Contents</h2>
+        <ul class="toc-list">
+          <li><a href="#section1">1. Personal Information We Collect and How We Collect It</a></li>
+          <li><a href="#section2">2. Use of Personal Information We Collect</a></li>
+          <li><a href="#section3">3. How We Disclose Personal Information We Collect</a></li>
+          <li><a href="#section4">4. Data Retention</a></li>
+          <li><a href="#section5">5. Security of Your Personal Information</a></li>
+          <li><a href="#section6">6. Additional Information for Nigerian Residents</a></li>
+          <li><a href="#section7">7. Your Choices</a></li>
+          <li><a href="#section8">8. Third-Party Disclosure and Links</a></li>
+          <li><a href="#section9">9. Notice Concerning the Information of Minors</a></li>
+          <li><a href="#section10">10. Additional Information About the Spill App</a></li>
+          <li><a href="#section11">11. International Data Transfers</a></li>
+          <li><a href="#section12">12. Changes to This Notice</a></li>
+          <li><a href="#contact">13. Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <div class="privacy-section" id="section1">
+        <h2>1. Personal Information We Collect and How We Collect It</h2>
+        
+        <p><strong>"Personal information"</strong> means information that identifies, relates to, describes, or could reasonably be linked with you. It does not include publicly available, deidentified, or aggregated information.</p>
+        
+        <p>We and our vendors collect personal information:</p>
+        <ul>
+          <li>Directly from you when you provide it</li>
+          <li>Automatically when you use the Services</li>
+          <li>From the Spill app (e.g., selfie verification)</li>
+          <li>From your contacts if they refer you</li>
+          <li>From vendors like Apple, Facebook, and Google during signup</li>
+        </ul>
+
+        <h3>A. Information You Provide</h3>
+        <p>When signing up, we may request your:</p>
+        <ul>
+          <li>Email address, date of birth, university, and location within Nigeria</li>
+          <li>Photograph (selfie) for verification</li>
+          <li>Relationship status or other profile fields</li>
+          <li>Messages, posts, and comments (text, images, audio)</li>
+        </ul>
+
+        <h3>B. Information Collected Automatically</h3>
+        <p>We and our vendors use cookies, SDKs, and similar tools to gather:</p>
+        <ul>
+          <li>Device identifiers, IP address, browser, OS, and usage data</li>
+          <li>Geolocation (when enabled)</li>
+          <li>Logs of activity, errors, and login attempts</li>
+        </ul>
+
+        <h3>C. Information Collected via the Spill App</h3>
+        <p>The app may request permission to access:</p>
+        <ul>
+          <li><strong>Camera</strong> (mandatory selfie for verification)</li>
+          <li><strong>Microphone</strong> (audio posts/comments)</li>
+          <li><strong>Contacts</strong> (invite friends, only with consent)</li>
+          <li><strong>Photos</strong> (uploading images)</li>
+          <li><strong>Face ID</strong> (optional local device authentication)</li>
+          <li><strong>Push Notifications</strong> (optional)</li>
+        </ul>
+        
+        <p><strong>Interactive Features:</strong> Spill offers anonymous interactive features, including red/green flag voting, comments, and AI-powered chat guidance. These features may capture and store chat transcripts, reactions, and votes.</p>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="privacy-section" id="section2">
+        <h2>2. Use of Personal Information We Collect</h2>
+        
+        <p>We use your information to:</p>
+        <ul>
+          <li>Verify your identity (selfie verification)</li>
+          <li>Enable posting, comments, reactions, and flag voting</li>
+          <li>Manage your account and subscription</li>
+          <li>Personalize your feed (e.g., based on university or age range)</li>
+          <li>Send account-related notifications</li>
+          <li>Improve and secure Services (fraud detection, abuse prevention)</li>
+          <li>Conduct analytics and reporting</li>
+          <li>Operate business functions, legal compliance, and risk management</li>
+        </ul>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="privacy-section" id="section3">
+        <h2>3. How We Disclose Personal Information We Collect</h2>
+        
+        <p>We may disclose your information:</p>
+        <ul>
+          <li>To vendors (e.g., hosting, analytics, Cloudinary for image uploads)</li>
+          <li>As part of a business transfer (sale, merger, financing)</li>
+          <li>To comply with legal obligations or enforce policies</li>
+          <li>To protect rights, safety, or prevent fraud</li>
+          <li>In emergencies</li>
+          <li>Internally to those who need it to provide Services</li>
+        </ul>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="privacy-section" id="section4">
+        <h2>4. Data Retention</h2>
+        
+        <p>We retain your information as long as your account is active or needed for business/legal purposes. You may request deletion through the app or by contacting us directly.</p>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="privacy-section" id="section5">
+        <h2>5. Security of Your Personal Information</h2>
+        
+        <p>We implement reasonable safeguards including end-to-end encryption for your data, but no system is 100% secure. Use strong, unique passwords and do not share them with anyone.</p>
+      </div>
+
+      <!-- Section 6 -->
+      <div class="privacy-section" id="section6">
+        <h2>6. Additional Information for Nigerian Residents</h2>
+        
+        <p>We are committed to protecting the privacy rights of Nigerian users in accordance with the Nigeria Data Protection Regulation (NDPR) and other applicable laws.</p>
+        
+        <p><strong>Your Rights:</strong> Nigerian residents have the right to:</p>
+        <ul>
+          <li>Access your personal data</li>
+          <li>Correct inaccurate information</li>
+          <li>Request deletion of your data</li>
+          <li>Object to processing</li>
+          <li>Data portability</li>
+          <li>Withdraw consent</li>
+        </ul>
+        
+        <p>We may share identifiers, usage data, and geolocation with analytics providers for service improvement purposes.</p>
+        
+        <p>We do not knowingly collect or share data of users under 18.</p>
+        
+        <p>To exercise your rights, contact us at: <a href="tel:+2348126684478" style="color: var(--primary-purple);">+234 812 668 4478</a></p>
+      </div>
+
+      <!-- Section 7 -->
+      <div class="privacy-section" id="section7">
+        <h2>7. Your Choices</h2>
+        
+        <ul>
+          <li><strong>Delete Account:</strong> Available in app settings</li>
+          <li><strong>Update Info:</strong> Within profile or by contacting us</li>
+          <li><strong>Permissions:</strong> Control camera, contacts, microphone, push notifications in device/app settings</li>
+          <li><strong>Communication Preferences:</strong> Opt out of marketing communications at any time</li>
+        </ul>
+        
+        <p>Uninstalling the app stops new data collection but doesn't delete your account.</p>
+      </div>
+
+      <!-- Section 8 -->
+      <div class="privacy-section" id="section8">
+        <h2>8. Third-Party Disclosure and Links</h2>
+        
+        <p>Links to outside sites (e.g., background checks, registries) are governed by their own policies. We are not responsible for the privacy practices of third-party websites.</p>
+      </div>
+
+      <!-- Section 9 -->
+      <div class="privacy-section" id="section9">
+        <h2>9. Notice Concerning Minors</h2>
+        
+        <p><strong>Spill is 18+ only.</strong> We do not knowingly collect data from children under 18. If we become aware that we have collected personal information from a child under 18, we will take steps to delete such information promptly.</p>
+      </div>
+
+      <!-- Section 10 -->
+      <div class="privacy-section" id="section10">
+        <h2>10. Additional Information About the Spill App</h2>
+        
+        <ul>
+          <li><strong>Age Restrictions:</strong> 18+ only</li>
+          <li><strong>Content Moderation:</strong> Automated + human review for red flag/green flag posts, abusive content, etc.</li>
+          <li><strong>User Reporting:</strong> Built-in reporting tools; violations may result in bans or law enforcement referrals</li>
+          <li><strong>Anonymous Features:</strong> All posts and interactions are anonymous to protect user privacy</li>
+          <li><strong>Verification:</strong> Selfie verification required to maintain community safety</li>
+        </ul>
+      </div>
+
+      <!-- Section 11 -->
+      <div class="privacy-section" id="section11">
+        <h2>11. International Data Transfers</h2>
+        
+        <p>Data may be transferred outside Nigeria for processing and storage. We ensure safeguards consistent with this Notice and applicable Nigerian data protection laws.</p>
+      </div>
+
+      <!-- Section 12 -->
+      <div class="privacy-section" id="section12">
+        <h2>12. Changes to This Notice</h2>
+        
+        <p>We may update this Notice from time to time. When we make changes, we will revise the effective date and notify you through the app or by phone if the changes are material.</p>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="contact-section" id="contact">
+        <h2>13. Contact Us</h2>
+        <p>If you have questions about this Notice or need to exercise your privacy rights, contact us at:</p>
+        <a href="tel:+2348126684478" class="contact-phone">
+          📱 +234 812 668 4478
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="assets/logo.png" alt="Spill Logo"> Spill
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Spill. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll shadow
+    window.addEventListener('scroll', ()=>{
+      const navbar=document.getElementById('navbar');
+      if(window.scrollY>80) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
+    });
+
+    // Smooth scroll for table of contents
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href');
+        if(id && id!=='#'){ 
+          e.preventDefault(); 
+          const target = document.querySelector(id);
+          if(target) {
+            target.scrollIntoView({behavior:'smooth',block:'start'});
+            // Add slight offset for fixed nav
+            setTimeout(() => {
+              window.scrollBy(0, -100);
+            }, 500);
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

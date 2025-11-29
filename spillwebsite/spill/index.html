@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spill - Sisterhood. Unfiltered.</title>
+  <meta name="description" content="Join the waitlist for Spill - the anonymous platform where Nigerian women support each other through dating, relationships, and life experiences.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://spillapp.com/">
+  <meta property="og:title" content="Spill - Sisterhood. Unfiltered.">
+  <meta property="og:description" content="A safe, anonymous space where Nigerian women share experiences, get real support, and protect each other. Join the waitlist to get early access.">
+  <meta property="og:image" content="https://spillapp.com/assets/logo.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Spill">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://spillapp.com/">
+  <meta property="twitter:title" content="Spill - Sisterhood. Unfiltered.">
+  <meta property="twitter:description" content="A safe, anonymous space where Nigerian women share experiences, get real support, and protect each other. Join the waitlist to get early access.">
+  <meta property="twitter:image" content="https://spillapp.com/assets/logo.png">
+  
+  <!-- WhatsApp (uses Open Graph but with specific optimizations) -->
+  <meta property="og:image:alt" content="Spill - Anonymous Nigerian women's support community">
+  <meta property="og:locale" content="en_NG">
+  
+  <!-- Snapchat -->
+  <meta name="snapchat:sticker" content="https://spillapp.com/assets/logo.png">
+  <meta name="snapchat:app_name" content="Spill">
+  
+  <!-- Additional Social Media Optimization -->
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:updated_time" content="2025-01-01T00:00:00Z">
+  <link rel="canonical" href="https://spillapp.com/">
+  
+  <!-- Rich Snippets for Mobile Sharing -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Spill">
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="keywords" content="Nigerian women support, anonymous platform, sisterhood, dating advice, relationship support, women community, safe space, Nigeria">
+  <meta name="author" content="Spill">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="theme-color" content="#6b0fa3">
+  
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Spill">
+  
+  <!-- Microsoft Tiles -->
+  <meta name="msapplication-TileColor" content="#6b0fa3">
+  <meta name="msapplication-TileImage" content="assets/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&family=Poiret+One&family=Ultra&family=Vidaloka&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+
+    :root{
+      --primary-purple:#6b0fa3;
+      --deep-purple:#4a0e6b;
+      --dark-purple:#2d0640;
+      --black:#0a0a0a;
+      --accent-pink:#d946ef;
+      --light-purple:#a855f7;
+      --page:#ffffff;
+      --band:#fafafa;
+      --text:#111111;
+      --muted:#444444;
+      --border:#eaeaea;
+      --shadow:0 10px 30px rgba(0,0,0,.06);
+    }
+
+    body{
+      font-family:'Vidaloka',serif;
+      line-height:1.6;
+      color:var(--text);
+      background:var(--page);
+      overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .container{max-width:1400px;margin:0 auto;padding:0 24px}
+
+    /* ========== NAVIGATION ========== */
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:1000;
+      background:#fff;
+      backdrop-filter:saturate(120%) blur(10px);
+      padding:20px 0;
+      transition:all .25s ease;
+      border-bottom:1px solid var(--border);
+      box-shadow:none;
+    }
+    .nav.scrolled{
+      padding:15px 0;
+      box-shadow:var(--shadow);
+    }
+    .nav-container{display:flex;justify-content:space-between;align-items:center}
+    .logo{
+      display:flex;align-items:center;gap:16px;
+      font-size:36px;font-family:'Gravitas One',cursive;
+      background:linear-gradient(135deg,var(--primary-purple),var(--accent-pink));
+      -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+      text-decoration:none;letter-spacing:2px;transition:transform .3s ease
+    }
+    .logo:hover{transform:scale(1.03)}
+    .logo img{width:48px;height:48px;border-radius:12px;box-shadow:0 4px 20px rgba(217,70,239,.25)}
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:32px;
+    }
+    .nav-link{
+      color:var(--text);
+      text-decoration:none;
+      font-family:'Open Sans',sans-serif;
+      font-weight:600;
+      font-size:15px;
+      transition:all .25s ease;
+      position:relative;
+    }
+    .nav-link:hover{
+      color:var(--primary-purple);
+      transform:translateY(-1px);
+    }
+    .nav-link::after{
+      content:'';
+      position:absolute;
+      bottom:-4px;
+      left:0;
+      width:0;
+      height:2px;
+      background:linear-gradient(135deg,var(--accent-pink),var(--primary-purple));
+      transition:width .3s ease;
+    }
+    .nav-link:hover::after{
+      width:100%;
+    }
+
+    .nav-right{
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+
+    /* ========== HAMBURGER MENU ========== */
+    .hamburger-menu{
+      width:44px;
+      height:44px;
+      display:grid;
+      place-items:center;
+      border:1px solid var(--border);
+      border-radius:12px;
+      background:#fff;
+      color:var(--primary-purple);
+      box-shadow:0 4px 14px rgba(0,0,0,.06);
+      cursor:pointer;
+      transition:transform .2s ease, box-shadow .2s ease, color .2s ease, border-color .2s ease;
+      z-index:1001;
+    }
+    .hamburger-menu:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 24px rgba(0,0,0,.10);
+      color:var(--deep-purple);
+      border-color:#ddd;
+    }
+
+    .hamburger-icon{
+      width:20px;
+      height:20px;
+      position:relative;
+      transition:all .3s ease;
+    }
+    .hamburger-icon span{
+      display:block;
+      position:absolute;
+      height:2px;
+      width:100%;
+      background:currentColor;
+      border-radius:1px;
+      opacity:1;
+      left:0;
+      transform:rotate(0deg);
+      transition:all .25s ease-in-out;
+    }
+    .hamburger-icon span:nth-child(1){
+      top:0px;
+    }
+    .hamburger-icon span:nth-child(2){
+      top:7px;
+    }
+    .hamburger-icon span:nth-child(3){
+      top:14px;
+    }
+
+    /* Hamburger animation when open */
+    .hamburger-menu.open .hamburger-icon span:nth-child(1){
+      top:7px;
+      transform:rotate(135deg);
+    }
+    .hamburger-menu.open .hamburger-icon span:nth-child(2){
+      opacity:0;
+      left:-60px;
+    }
+    .hamburger-menu.open .hamburger-icon span:nth-child(3){
+      top:7px;
+      transform:rotate(-135deg);
+    }
+
+    .social-icon{
+      width:44px;
+      height:44px;
+      display:grid;
+      place-items:center;
+      border:1px solid var(--border);
+      border-radius:12px;
+      background:#fff;
+      color:var(--primary-purple);
+      box-shadow:0 4px 14px rgba(0,0,0,.06);
+      text-decoration:none;
+      transition:transform .2s ease, box-shadow .2s ease, color .2s ease, border-color .2s ease;
+    }
+    .social-icon:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 24px rgba(0,0,0,.10);
+      color:var(--deep-purple);
+      border-color:#ddd;
+    }
+
+    /* ========== MOBILE MENU MODAL ========== */
+    .nav-modal{
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background:rgba(0,0,0,.5);
+      z-index:999;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      opacity:0;
+      visibility:hidden;
+      transition:all .3s ease;
+    }
+    .nav-modal.active{
+      opacity:1;
+      visibility:visible;
+    }
+    .nav-modal-content{
+      background:#fff;
+      border-radius:20px;
+      padding:40px 36px;
+      max-width:380px;
+      width:90%;
+      box-shadow:0 20px 60px rgba(0,0,0,.15);
+      transform:scale(.9) translateY(20px);
+      transition:all .3s ease;
+      position:relative;
+    }
+    .nav-modal.active .nav-modal-content{
+      transform:scale(1) translateY(0);
+    }
+
+    .nav-modal-header{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:32px;
+      gap:12px;
+    }
+    .nav-modal-title{
+      font-size:24px;
+      font-family:'Gravitas One',cursive;
+      background:linear-gradient(135deg,var(--primary-purple),var(--accent-pink));
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    .nav-modal-logo{
+      width:36px;
+      height:36px;
+      border-radius:8px;
+    }
+
+    .nav-modal-links{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+    .nav-modal-link{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      padding:16px 20px;
+      background:var(--band);
+      border-radius:16px;
+      text-decoration:none;
+      color:var(--text);
+      font-family:'Open Sans',sans-serif;
+      font-weight:600;
+      font-size:16px;
+      transition:all .25s ease;
+      border:1px solid var(--border);
+    }
+    .nav-modal-link:hover{
+      background:#fff;
+      color:var(--primary-purple);
+      transform:translateX(8px);
+      box-shadow:0 4px 20px rgba(0,0,0,.08);
+    }
+    .nav-modal-link-icon{
+      width:24px;
+      height:24px;
+      display:grid;
+      place-items:center;
+      background:var(--primary-purple);
+      color:#fff;
+      border-radius:8px;
+      font-size:14px;
+    }
+
+    /* ========== HERO ========== */
+    .hero{
+      min-height:100vh;display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:80px;
+      position:relative;overflow:hidden;background:#fff;padding:120px 0 80px 0;isolation:isolate;
+    }
+    .hero::before{
+      content:'';position:absolute;top:-40%;right:-20%;width:60%;height:120%;
+      background:radial-gradient(circle at center, rgba(217,70,239,.18) 0%, rgba(107,15,163,.12) 40%, transparent 70%);
+      border-radius:50%;animation:float 20s ease-in-out infinite;filter:blur(60px);opacity:.12
+    }
+    .hero::after{
+      content:'';position:absolute;bottom:-30%;left:-10%;width:40%;height:80%;
+      background:radial-gradient(circle at center, rgba(107,15,163,.14) 0%, transparent 70%);
+      border-radius:50%;animation:float 25s ease-in-out infinite reverse;filter:blur(50px);opacity:.12
+    }
+    @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-14px) rotate(2deg)}}
+
+    .hero-text{z-index:2;position:relative;animation:slideInUp 1s cubic-bezier(.4,0,.2,1);padding-left:60px}
+    @keyframes slideInUp{from{opacity:0;transform:translateY(60px)}to{opacity:1;transform:translateY(0)}}
+
+    .hero-badge{
+      display:inline-flex;align-items:center;gap:8px;
+      background:#fff;color:var(--primary-purple);
+      padding:10px 18px;border-radius:50px;font-size:13px;
+      font-family:'Open Sans',sans-serif;border:1px solid var(--border);margin-bottom:24px;
+      box-shadow:0 4px 14px rgba(0,0,0,.04)
+    }
+    .hero-badge::before{content:'✨';font-size:16px}
+
+    .hero-title{
+      font-size:clamp(36px,8vw,88px);
+      font-family:'Gravitas One',cursive;line-height:1.12;margin-bottom:18px;letter-spacing:-1px;
+      background:linear-gradient(135deg,var(--accent-pink),var(--primary-purple),var(--light-purple));
+      -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+      filter:none;
+      text-shadow:none;
+      word-break:break-word;
+    }
+    .hero-subtitle{
+      font-size:20px;color:var(--muted);margin-bottom:32px;
+      font-family:'Open Sans',sans-serif;
+      line-height:1.75;max-width:540px;padding-right:40px
+    }
+
+    .cta-button{
+      display:inline-flex;align-items:center;gap:12px;padding:18px 32px;
+      background:linear-gradient(135deg,var(--primary-purple),var(--deep-purple),#111);
+      color:#fff;border:1px solid rgba(0,0,0,.06);border-radius:16px;font-size:16px;
+      font-family:'Open Sans',sans-serif;font-weight:700;cursor:pointer;
+      transition:all .35s cubic-bezier(.4,0,.2,1);text-decoration:none;margin-bottom:28px;
+      box-shadow:0 10px 30px rgba(107,15,163,.18);position:relative;overflow:hidden
+    }
+    .cta-button::before{
+      content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);transition:left .5s
+    }
+    .cta-button:hover::before{left:100%}
+    .cta-button:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(107,15,163,.26);background:linear-gradient(135deg,var(--deep-purple),var(--primary-purple),var(--accent-pink))}
+    .cta-button::after{content:'→';font-size:18px;transition:transform .25s ease}
+    .cta-button:hover::after{transform:translateX(4px)}
+
+    .platform-badges{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .platform-badge{
+      display:flex;align-items:center;gap:8px;padding:10px 14px;background:#fff;border:1px solid var(--border);
+      border-radius:12px;font-size:13px;font-family:'Open Sans',sans-serif;color:#222;transition:all .25s ease;
+      box-shadow:0 4px 14px rgba(0,0,0,.04)
+    }
+    .platform-badge:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.08)}
+
+    .hero-visual{position:relative;z-index:2;display:flex;justify-content:center;align-items:center;animation:slideInRight 1.2s cubic-bezier(.4,0,.2,1)}
+    @keyframes slideInRight{from{opacity:0;transform:translateX(80px)}to{opacity:1;transform:translateX(0)}}
+    .hero-image-container{position:relative;animation:float 8s ease-in-out infinite}
+    .hero-image{
+      max-width:100%;width:450px;height:auto;border-radius:24px;
+      box-shadow:var(--shadow);transition:transform .35s cubic-bezier(.4,0,.2,1);
+      border:1px solid var(--border);
+    }
+    .hero-image:hover{transform:translateY(-6px) scale(1.01)}
+    .hero-image-container::before{
+      content:'';position:absolute;top:-24px;left:-24px;right:-24px;bottom:-24px;
+      background:linear-gradient(135deg,var(--accent-pink),var(--primary-purple));border-radius:32px;opacity:.12;z-index:-1;filter:blur(24px)
+    }
+
+    /* ========== FOUNDER'S NOTE ========== */
+    .founders-note{
+      padding:120px 0;background:var(--band);position:relative;overflow:hidden
+    }
+    .founders-note::before{
+      content:'';position:absolute;top:-20%;left:-20%;width:40%;height:140%;
+      background:radial-gradient(circle at center, rgba(217,70,239,.08) 0%, rgba(107,15,163,.05) 40%, transparent 70%);
+      border-radius:50%;animation:float 25s ease-in-out infinite;filter:blur(40px);opacity:.6
+    }
+    .founders-content{
+      max-width:900px;margin:0 auto;position:relative;z-index:2;text-align:center
+    }
+    .founders-header{margin-bottom:48px}
+    .founders-badge{
+      display:inline-flex;align-items:center;gap:8px;
+      background:#fff;color:var(--primary-purple);
+      padding:12px 20px;border-radius:50px;font-size:14px;
+      font-family:'Open Sans',sans-serif;border:1px solid var(--border);margin-bottom:20px;
+      box-shadow:0 4px 14px rgba(0,0,0,.04);font-weight:600
+    }
+    .founders-title{
+      font-size:clamp(36px,5.5vw,48px);font-family:'Ultra',serif;margin-bottom:12px;
+      background:linear-gradient(135deg,var(--accent-pink),var(--light-purple));
+      -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+      letter-spacing:-1px;line-height:1.2
+    }
+    .founders-message{
+      background:#fff;border-radius:24px;padding:48px 40px;
+      box-shadow:var(--shadow);border:1px solid var(--border);
+      text-align:left;position:relative;overflow:hidden
+    }
+    .founders-message::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:4px;
+      background:linear-gradient(90deg,var(--accent-pink),var(--primary-purple),var(--light-purple))
+    }
+    .message-text{margin-bottom:36px}
+    .message-text p{
+      font-size:16px;line-height:1.8;color:#333;margin-bottom:20px;
+      font-family:'Open Sans',sans-serif
+    }
+    .message-text p:last-child{margin-bottom:0}
+    .message-text strong{
+      color:var(--primary-purple);font-weight:700
+    }
+    .message-text em{
+      background:linear-gradient(135deg,var(--accent-pink),var(--primary-purple));
+      -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+      font-style:normal;font-weight:700;letter-spacing:.5px
+    }
+    .closing-message{
+      font-size:18px !important;font-weight:600 !important;
+      color:var(--primary-purple) !important;
+      font-style:italic;margin-top:24px !important
+    }
+    .founder-signature{
+      border-top:1px solid var(--border);padding-top:24px;text-align:center
+    }
+    .signature-line{
+      font-size:14px;color:var(--muted);margin-bottom:8px;
+      font-family:'Open Sans',sans-serif;font-style:italic
+    }
+    .founder-name{
+      font-size:22px;font-family:'Ultra',serif;
+      background:linear-gradient(135deg,var(--primary-purple),var(--accent-pink));
+      -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+      margin-bottom:4px;font-weight:normal
+    }
+    .founder-title{
+      font-size:14px;color:var(--muted);font-family:'Open Sans',sans-serif;
+      letter-spacing:.8px;text-transform:uppercase
+    }
+
+    /* ========== FEATURES ========== */
+    .features{padding:120px 0;background:#fff}
+    .features-header{text-align:center;margin-bottom:72px;animation:fadeInUp 1s ease-out}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+
+    .section-title{
+      font-size:clamp(40px,6vw,56px);font-family:'Ultra',serif;margin-bottom:12px;
+      background:linear-gradient(135deg,var(--accent-pink),var(--light-purple));
+      -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+      letter-spacing:-1px;line-height:1.2;filter:none;text-shadow:none
+    }
+    .section-subtitle{
+      font-size:18px;color:var(--muted);max-width:700px;margin:0 auto;line-height:1.75;
+      font-family:'Open Sans',sans-serif;
+    }
+
+    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:32px;margin-top:48px}
+    .feature-card{
+      text-align:center;padding:36px 26px;border-radius:20px;background:#fff;border:1px solid var(--border);
+      transition:all .35s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden;box-shadow:var(--shadow)
+    }
+    .feature-card:hover{transform:translateY(-8px);box-shadow:0 18px 48px rgba(0,0,0,.10);border-color:#ddd}
+    .feature-icon{width:200px;height:200px;margin:0 auto 20px;border-radius:18px;overflow:hidden;position:relative;box-shadow:0 10px 30px rgba(0,0,0,.08);transition:transform .35s}
+    .feature-card:hover .feature-icon{transform:scale(1.03)}
+    .feature-icon img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      object-position:center;
+    }
+    .feature-title{font-size:24px;font-family:'Ultra',serif;margin-bottom:10px;color:#111;letter-spacing:-.3px}
+    .feature-description{color:var(--muted);line-height:1.75;font-size:15px;font-family:'Open Sans',sans-serif}
+
+    /* ========== HOW IT WORKS ========== */
+    .how-it-works{padding:120px 0;background:var(--band);position:relative}
+    .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:40px;margin-top:48px}
+    .step-card{
+      text-align:center;position:relative;padding:34px 22px;background:#fff;border-radius:20px;border:1px solid var(--border);
+      transition:all .35s cubic-bezier(.4,0,.2,1);box-shadow:var(--shadow)
+    }
+    .step-card:hover{transform:translateY(-6px);box-shadow:0 16px 44px rgba(0,0,0,.10)}
+    .step-number{
+      width:70px;height:70px;background:linear-gradient(135deg,var(--accent-pink),var(--primary-purple));color:#fff;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;font-size:26px;font-family:'Ultra',serif;margin:0 auto 18px;
+      box-shadow:0 10px 26px rgba(107,15,163,.25);transition:transform .35s
+    }
+    .step-card:hover .step-number{transform:scale(1.06) rotate(3deg)}
+    .step-image{width:260px;height:260px;margin:0 auto 18px;border-radius:18px;overflow:hidden;border:1px solid var(--border);box-shadow:0 12px 30px rgba(0,0,0,.08);transition:transform .35s}
+    .step-card:hover .step-image{transform:scale(1.03)}
+    .step-image img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      object-position:center;
+    }
+    .step-title{font-size:24px;font-family:'Ultra',serif;margin-bottom:10px;color:#111;letter-spacing:-.3px}
+    .step-description{color:var(--muted);line-height:1.75;font-size:15px;font-family:'Open Sans',sans-serif}
+
+    /* ========== STATS ========== */
+    .stats{padding:100px 0;background:#fff;color:#111;position:relative;overflow:hidden}
+    .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;text-align:center;position:relative;z-index:2}
+    .stat-item{padding:32px 20px;background:#fff;border-radius:20px;border:1px solid var(--border);box-shadow:var(--shadow);transition:all .35s}
+    .stat-item:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.10);border-color:#ddd}
+    .stat-number{
+      font-size:56px;font-family:'Ultra',serif;background:linear-gradient(135deg,var(--accent-pink),var(--light-purple));
+      -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px;display:block;letter-spacing:-1px;
+      filter:none;text-shadow:none
+    }
+    .stat-label{font-size:14px;color:var(--muted);font-family:'Open Sans',sans-serif;letter-spacing:.2px}
+
+    /* ========== FINAL CTA ========== */
+    .final-cta{
+      padding:120px 0;background:linear-gradient(135deg,var(--deep-purple) 0%,var(--primary-purple) 55%,var(--accent-pink) 100%);
+      color:#fff;text-align:center;position:relative;overflow:hidden
+    }
+    .final-cta-content{position:relative;z-index:2}
+    .final-cta h2{
+      font-size:clamp(40px,6.8vw,64px);font-family:'Ultra',serif;margin-bottom:16px;letter-spacing:-1px;text-shadow:none
+    }
+    .final-cta p{
+      font-size:20px;margin-bottom:40px;opacity:.95;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.75;font-family:'Open Sans',sans-serif
+    }
+    .final-cta-button{
+      display:inline-flex;align-items:center;gap:12px;padding:22px 40px;background:linear-gradient(135deg,#0f0f0f,#2a2a2a);
+      color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:16px;font-size:18px;font-family:'Open Sans',sans-serif;font-weight:700;
+      cursor:pointer;transition:all .35s cubic-bezier(.4,0,.2,1);text-decoration:none;box-shadow:0 20px 60px rgba(0,0,0,.35);position:relative;overflow:hidden
+    }
+    .final-cta-button::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transition:left .5s}
+    .final-cta-button:hover::before{left:100%}
+    .final-cta-button:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 28px 72px rgba(0,0,0,.38)}
+    .final-cta-button::after{content:'✨';font-size:18px;transition:transform .25s ease}
+    .final-cta-button:hover::after{transform:scale(1.12) rotate(8deg)}
+
+    /* ========== FOOTER ========== */
+    .footer{
+      background:#fff;color:#222;padding:80px 0 40px;text-align:center;border-top:1px solid var(--border)
+    }
+    .footer-logo{
+      display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:24px;font-size:28px;
+      font-family:'Gravitas One',cursive;background:linear-gradient(135deg,var(--primary-purple),var(--accent-pink));
+      -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent
+    }
+    .footer-logo img{width:40px;height:40px;border-radius:8px;box-shadow:0 4px 20px rgba(217,70,239,.25)}
+    .footer-links{display:flex;justify-content:center;gap:28px;margin-bottom:22px;flex-wrap:wrap}
+    .footer-links a{color:#333;text-decoration:none;transition:all .25s ease;font-family:'Open Sans',sans-serif;position:relative}
+    .footer-links a:hover{color:#000;transform:translateY(-1px)}
+    .footer-bottom{border-top:1px solid var(--border);padding-top:16px;color:#666;font-size:13px;font-family:'Open Sans',sans-serif}
+
+    /* ========== UTILITIES ========== */
+    .animate-on-scroll{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(.4,0,.2,1)}
+    .animate-on-scroll.animated{opacity:1;transform:translateY(0)}
+    .hover-lift{transition:transform .2s ease, box-shadow .2s ease}
+    .hover-lift:hover{transform:translateY(-3px)}
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width:968px){
+      .nav-links{display:none}
+      .hero{grid-template-columns:1fr;gap:60px;text-align:center;padding:140px 0 80px}
+      .hero-text{padding:0 20px}
+      .hero-subtitle{padding-right:0;margin:0 auto 32px}
+      .hero-visual{order:-1}
+      .hero-image{width:350px}
+      .platform-badges{justify-content:center}
+      .features-grid{grid-template-columns:1fr;gap:32px}
+      .steps-grid{grid-template-columns:1fr;gap:40px}
+      .stats-grid{grid-template-columns:repeat(2,1fr);gap:32px}
+      .features,.how-it-works,.founders-note{padding:100px 0}
+      .final-cta{padding:100px 0}
+      .footer-links{flex-direction:column;gap:16px}
+      .founders-message{padding:36px 28px}
+    }
+    @media (max-width:640px){
+      .container{padding:0 20px}
+      .hero{padding:120px 0 60px}
+      .hero-image{width:280px}
+      .step-image{width:240px;height:240px}
+      .feature-icon{width:160px;height:160px}
+      .stats-grid{grid-template-columns:1fr;gap:28px}
+      .stat-number{font-size:48px}
+      .features,.how-it-works,.final-cta,.founders-note{padding:80px 0}
+      .founders-message{padding:28px 20px}
+      .message-text p{font-size:15px}
+      .closing-message{font-size:16px !important}
+      
+      .hamburger-menu, .social-icon{
+        width:38px;
+        height:38px;
+      }
+      .hamburger-menu svg, .social-icon svg{
+        width:18px;
+        height:18px;
+      }
+      
+      .nav-modal-content{
+        max-width:320px;
+        width:95%;
+        padding:28px 24px;
+      }
+      .nav-modal-title{
+        font-size:20px;
+      }
+      .nav-modal-link{
+        padding:14px 16px;
+        font-size:15px;
+      }
+    }
+
+    @media (max-width:400px){
+      .nav{padding:14px 0}
+      .logo{font-size:28px}
+      .logo img{width:36px;height:36px}
+
+      .hero{
+        min-height:auto;
+        gap:36px;
+        padding:110px 0 48px;
+      }
+      .hero-text{padding:0 16px !important}
+      .hero-title{
+        font-size:clamp(28px, 9.2vw, 56px) !important;
+        line-height:1.15;
+        word-break:break-word;
+      }
+      .hero-subtitle{
+        font-size:16px !important;
+        line-height:1.7;
+        max-width:unset;
+        padding-right:0;
+        margin-bottom:22px;
+      }
+      .cta-button{
+        padding:14px 18px;
+        font-size:14px;
+        border-radius:12px;
+        gap:8px;
+        margin-bottom:20px;
+      }
+      .hero-visual{order:-1}
+      .hero-image{width:240px}
+      .platform-badges{gap:8px}
+      .platform-badge{padding:8px 10px;font-size:12px}
+      
+      .nav-modal-content{
+        max-width:300px;
+        width:90%;
+        padding:24px 20px;
+      }
+      .nav-modal-header{
+        margin-bottom:24px;
+      }
+      .nav-modal-links{
+        gap:12px;
+      }
+      .nav-modal-link{
+        padding:12px 14px;
+        font-size:14px;
+      }
+      .nav-modal-link-icon{
+        width:20px;
+        height:20px;
+        font-size:12px;
+      }
+    }
+
+    ::-webkit-scrollbar{width:10px}
+    ::-webkit-scrollbar-track{background:#fff}
+    ::-webkit-scrollbar-thumb{background:linear-gradient(135deg,var(--primary-purple),var(--accent-pink));border-radius:5px}
+    ::-webkit-scrollbar-thumb:hover{background:linear-gradient(135deg,var(--accent-pink),var(--primary-purple))}
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="container">
+      <div class="nav-container">
+        <a class="logo" href="#"><img src="assets/logo.png" alt="Spill Logo"> Spill</a>
+        
+        
+        
+        <div class="nav-right">
+          
+          <!-- Instagram Icon -->
+          <a
+            class="social-icon"
+            href="https://www.instagram.com/spill.ng"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
+              <path d="M16 2H8a6 6 0 0 0-6 6v8a6 6 0 0 0 6 6h8a6 6 0 0 0 6-6V8a6 6 0 0 0-6-6Z" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="12" cy="12" r="3.6" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="17.35" cy="6.65" r="1.2" fill="currentColor"/>
+            </svg>
+          </a>
+          <!-- Hamburger Menu -->
+          <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="hamburger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU MODAL -->
+  <div class="nav-modal" id="navModal">
+    <div class="nav-modal-content">
+      <div class="nav-modal-header">
+        <img src="assets/logo.png" alt="Spill Logo" class="nav-modal-logo">
+        <h2 class="nav-modal-title">Spill</h2>
+      </div>
+      <div class="nav-modal-links">
+        <a href="#home" class="nav-modal-link">
+          <div class="nav-modal-link-icon">🏠</div>
+          Home
+        </a>
+        <a href="#founder" class="nav-modal-link">
+          <div class="nav-modal-link-icon">👩</div>
+          Founder
+        </a>
+        <a href="#features" class="nav-modal-link">
+          <div class="nav-modal-link-icon">✨</div>
+          Features
+        </a>
+        <a href="#how" class="nav-modal-link">
+          <div class="nav-modal-link-icon">📋</div>
+          How It Works
+        </a>
+        <a href="privacy.html" class="nav-modal-link">
+          <div class="nav-modal-link-icon">🔒</div>
+          Privacy
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container" style="display:contents;">
+      <div class="hero-text">
+        <span class="hero-badge">Women-first • Anonymous • Supportive</span>
+        <h1 class="hero-title">Sisterhood. Unfiltered.</h1>
+        <p class="hero-subtitle">
+          A safe, anonymous space where Nigerian women share experiences, get real support,
+          and protect each other. Join the waitlist to get early access.
+        </p>
+        <a class="cta-button" target="_blank"
+           href="https://docs.google.com/forms/d/e/1FAIpQLScKph20R_o3yGk74Ju9XIFAP1Dc15YUi4QKhsj-VRGs4xO1gA/viewform?usp=header">
+          Join Waitlist
+        </a>
+        <div class="platform-badges">
+          <div class="platform-badge hover-lift">iPhone</div>
+          <div class="platform-badge hover-lift">Android</div>
+          <div class="platform-badge hover-lift">Anonymous</div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-container">
+          <img class="hero-image" src="assets/onbwhisper.png" alt="Spill App Preview">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER'S NOTE -->
+  <section class="founders-note" id="founder">
+    <div class="container">
+      <div class="founders-content">
+        <div class="founders-header">
+          <span class="founders-badge">A note from your founder 💜</span>
+          <h2 class="founders-title">Building the Space We Needed</h2>
+        </div>
+        
+        <div class="founders-message">
+          <div class="message-text">
+            <p>When I looked around, I realized something was missing. Nigerian women needed a space. A real space where we could speak our truth without judgment, without fear, without having to shrink ourselves to fit into boxes that were never made for us.</p>
+            
+            <p>That realization sparked the vision for Spill. I saw brilliant women holding back their thoughts, their experiences, their questions because where do you go to talk about the things that matter? Where do you share your dating stories without being shamed? Where do you ask about your body without being judged? Where do you navigate workplace challenges with people who truly get it?</p>
+            
+            <p><strong>Spill is that space. It's our space.</strong></p>
+            
+            <p>This is a platform for the girls' girls, where femininity doesn't just exist, it <em>THRIVES</em>. Here, you can talk about everything: dating adventures, those green and red flags we all need to discuss, your body and health, life experiences that shaped you, education, work challenges, and yes, even the men who either lift us up or let us down.</p>
+            
+            <p>The best part? It's completely anonymous. Your data stays secret, everything is end to end encrypted. No judgment, no exposure, just pure, authentic connection with women who understand your journey.</p>
+            
+            <p>I've been quietly working on this project, pouring my heart into bringing you something special. Something that honors who we are and gives us the freedom to be exactly that, unapologetically.</p>
+            
+            <p>We're launching soon in Nigeria, and I cannot wait to watch our community flourish.</p>
+            
+            <p class="closing-message">Get ready to spill, sisters. Your safe space is coming.</p>
+          </div>
+          
+          <div class="founder-signature">
+            <div class="signature-line">With love and anticipation,</div>
+            <div class="founder-name">Oluwanifemi Ojo</div>
+            <div class="founder-title">Founder, Spill</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="features-header">
+        <h2 class="section-title">Why Nigerian Women Choose Spill</h2>
+        <p class="section-subtitle">Share your truth, get support, and help other women stay safe in our community.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card animate-on-scroll hover-lift">
+          <div class="feature-icon"><img src="assets/onbwhisper.png" alt="Anonymous & Safe"></div>
+          <h3 class="feature-title">Anonymous & Safe</h3>
+          <p class="feature-description">Post freely without fear. Your identity stays protected in a verified women-only community.</p>
+        </div>
+
+        <div class="feature-card animate-on-scroll hover-lift">
+          <div class="feature-icon"><img src="assets/onbreaction.png" alt="Support & Validate"></div>
+          <h3 class="feature-title">Support & Validate</h3>
+          <p class="feature-description">React, upvote, and surface the most helpful experiences and advice from your sisters.</p>
+        </div>
+
+        <div class="feature-card animate-on-scroll hover-lift">
+          <div class="feature-icon"><img src="assets/onbverify.png" alt="Women Only"></div>
+          <h3 class="feature-title">Women-Only Space</h3>
+          <p class="feature-description">Only verified Nigerian women can join. No judgment—just honest sisterhood.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how">
+    <div class="container">
+      <h2 class="section-title">How Spill Works</h2>
+      <p class="section-subtitle">Join your Nigerian sisterhood in three simple steps.</p>
+
+      <div class="steps-grid">
+        <div class="step-card animate-on-scroll hover-lift">
+          <div class="step-number">1</div>
+          <div class="step-image"><img src="assets/register.png" alt="Sign Up"></div>
+          <h3 class="step-title">Sign Up</h3>
+          <p class="step-description">Create an account and verify to keep our community safe and authentic.</p>
+        </div>
+
+        <div class="step-card animate-on-scroll hover-lift">
+          <div class="step-number">2</div>
+          <div class="step-image"><img src="assets/onbwhisper.png" alt="Share Anonymously"></div>
+          <h3 class="step-title">Share Anonymously</h3>
+          <p class="step-description">Post experiences and concerns with total anonymity and privacy.</p>
+        </div>
+
+        <div class="step-card animate-on-scroll hover-lift">
+          <div class="step-number">3</div>
+          <div class="step-image"><img src="assets/onbvote.png" alt="Support & Connect"></div>
+          <h3 class="step-title">Support & Connect</h3>
+          <p class="step-description">Lift each other up with reactions, advice, and flags when needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item animate-on-scroll hover-lift">
+          <span class="stat-number" data-target="1000">0</span>
+          <span class="stat-label">Nigerian Women Waiting</span>
+        </div>
+        <div class="stat-item animate-on-scroll hover-lift">
+          <span class="stat-number" data-target="50">0</span>
+          <span class="stat-label">Cities Ready</span>
+        </div>
+        <div class="stat-item animate-on-scroll hover-lift">
+          <span class="stat-number" data-target="100">0</span>
+          <span class="stat-label">Anonymous</span>
+        </div>
+        <div class="stat-item animate-on-scroll hover-lift">
+          <span class="stat-number" data-target="24">0</span>
+          <span class="stat-label">Support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta" id="join">
+    <div class="container">
+      <div class="final-cta-content">
+        <h2>Ready to Join the Sisterhood?</h2>
+        <p>Join the waitlist and be first to know when we launch in Nigeria.</p>
+        <a class="final-cta-button" target="_blank"
+           href="https://docs.google.com/forms/d/e/1FAIpQLScKph20R_o3yGk74Ju9XIFAP1Dc15YUi4QKhsj-VRGs4xO1gA/viewform?usp=header">
+          Get Early Access
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="assets/logo.png" alt="Spill Logo"> Spill
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html" class="hover-lift">Privacy Policy</a>
+        <a href="#terms" class="hover-lift">Terms of Service</a>
+        <a href="#contact" class="hover-lift">Contact</a>
+        <a href="#about" class="hover-lift">About</a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Spill. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll shadow
+    window.addEventListener('scroll', ()=>{
+      const navbar=document.getElementById('navbar');
+      if(window.scrollY>80) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
+    });
+
+    // Hamburger menu functionality
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    const navModal = document.getElementById('navModal');
+
+    hamburgerMenu.addEventListener('click', () => {
+      hamburgerMenu.classList.toggle('open');
+      navModal.classList.toggle('active');
+      document.body.style.overflow = navModal.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close modal when clicking outside
+    navModal.addEventListener('click', (e) => {
+      if (e.target === navModal) {
+        hamburgerMenu.classList.remove('open');
+        navModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Close modal when clicking nav links
+    document.querySelectorAll('.nav-modal-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburgerMenu.classList.remove('open');
+        navModal.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href');
+        if(id && id!=='#'){ e.preventDefault(); document.querySelector(id)?.scrollIntoView({behavior:'smooth',block:'start'}); }
+      });
+    });
+
+    // Animate-on-scroll
+    const io=new IntersectionObserver((entries)=>{
+      entries.forEach(en=>{
+        if(en.isIntersecting){ en.target.classList.add('animated'); io.unobserve(en.target); }
+      });
+    },{threshold:.12});
+    document.querySelectorAll('.animate-on-scroll').forEach(el=>io.observe(el));
+
+    // Stat counters
+    function animateCounter(el,target){
+      let cur=0; const step=Math.max(1,Math.floor(target/60));
+      const t=setInterval(()=>{
+        cur+=step; if(cur>=target){cur=target; clearInterval(t);}
+        if(target>=1000){el.textContent=Math.floor(cur/1000)+'K+';}
+        else if(target===100){el.textContent=Math.floor(cur)+'%';}
+        else{el.textContent=Math.floor(cur)+(target===24?'/7':'+');}
+      },16);
+    }
+    const statsSection=document.querySelector('.stats');
+    if(statsSection){
+      const so=new IntersectionObserver((entries)=>{
+        entries.forEach(en=>{
+          if(en.isIntersecting){
+            statsSection.querySelectorAll('.stat-number').forEach(n=>{
+              const t=parseInt(n.getAttribute('data-target')); animateCounter(n,t);
+            });
+            so.unobserve(statsSection);
+          }
+        });
+      },{threshold:.4});
+      so.observe(statsSection);
+    }
+  </script>
+</body>
+</html>

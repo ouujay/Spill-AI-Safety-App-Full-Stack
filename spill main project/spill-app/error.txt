@@ -1,0 +1,46 @@
+attempted: http://10.181.95.15:8000/api/users/universities/
+ WARN  Response: undefined
+ WARN  Status: undefined
+ LOG  Attempting login for: orderingpau@gmail.com
+ WARN  API Client: Network error: Network Error
+ ERROR  Login error: [Error: Login failed. Please check your credentials.]
+Terminate batch job (Y/N)?
+^C
+C:\Users\sbnuf\Desktop\projects\spill\spill main project\spill-app>npx expo start
+Starting project at C:\Users\sbnuf\Desktop\projects\spill\spill main project\spill-app
+› Port 8081 is being used by another process
+√ Use port 8082 instead? ... yes
+Starting Metro Bundler
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+█ ▄▄▄▄▄ █   █▄ █▄▀█ ▄▄▄▄▄ █
+█ █   █ █ ▀▄ █▀▄ ▄█ █   █ █
+█ █▄▄▄█ █▀██▀▀█▀▄██ █▄▄▄█ █
+█▄▄▄▄▄▄▄█▄▀▄█ █▄█▄█▄▄▄▄▄▄▄█
+█  ▀▀ ▄▄██▀▀▄▀█▄ █▀█ ▀▄▄ ▄█
+█▀█ █ ▀▄▄▀█▀ ▄██ █▄█▀   ▀██
+█▀█▀▄▀▀▄ █▀▄█▄▀▄▀▄▀▄ ▀▄ ▀██
+███▀▀▀█▄█▀▀▀█▀██ ▀ ▄██ ▀███
+█▄▄███▄▄█▀█▀▄▀█▄  ▄▄▄ ▀ ▄▄█
+█ ▄▄▄▄▄ █▀ ▄ ▄██▀ █▄█ ▀▀█▀█
+█ █   █ █▄ ▄█▄▀▄█ ▄ ▄▄▀   █
+█ █▄▄▄█ █▀ ██▀▄█▀█▀▄▀█▀▀ ██
+█▄▄▄▄▄▄▄█▄██▄▄▄▄██▄▄▄▄▄▄▄▄█
+
+› Metro waiting on exp://10.181.95.15:8082
+› Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
+
+› Using Expo Go
+› Press s │ switch to development build
+
+› Press a │ open Android
+› Press w │ open web
+
+› Press j │ open debugger
+› Press r │ reload app
+› Press m │ toggle menu
+› shift+m │ more tools
+› Press o │ open project code in your editor
+
+› Press ? │ show all commands
+
+Logs for your project will appear below. Press Ctrl+C to exit.

@@ -1,0 +1,77 @@
+
+@access_token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2NzU2NDg3LCJpYXQiOjE3NTQxNjQ0ODcsImp0aSI6Ijk4MTkwMmM3ZjY2MzRkMWFhOWNhOTllMDYxNmU0N2EyIiwidXNlcl9pZCI6Mn0.CTx8UZ6Bd020spmLVkmGycutH4BojN4leBj0CiFQRX4
+
+# Paste your tokens here for easy reference
+# ACCESS TOKEN:
+# eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2NzU2NDg3LCJpYXQiOjE3NTQxNjQ0ODcsImp0aSI6Ijk4MTkwMmM3ZjY2MzRkMWFhOWNhOTllMDYxNmU0N2EyIiwidXNlcl9pZCI6Mn0.CTx8UZ6Bd020spmLVkmGycutH4BojN4leBj0CiFQRX4
+
+# REFRESH TOKEN:
+# eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTg0MDU2NDQ4NywiaWF0IjoxNzU0MTY0NDg3LCJqdGkiOiJjZjRiM2JmODhlYTM0Y2E1YWNkMTk0NTJiODU2OGJkYiIsInVzZXJfaWQiOjJ9.I0RN0r52n46I4ist-p4AkrsV2AWtVKCxWf_LkaNRwbc
+
+### UPVOTE A POST### Like a post
+POST http://localhost:8000/api/posts/react/1/
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+{
+  "reaction": "up"
+}
+
+
+### DOWNVOTE A POST
+POST http://localhost:8000/api/posts/vote/
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "post": 1,    // Replace with the actual post ID you want to downvote
+  "reaction": "down"
+}
+
+###
+
+POST http://localhost:8000/api/posts/create/
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "type": "red",
+  "content": "Replying to this post",
+  "parent": 1
+}
+
+###
+GET http://localhost:8000/api/posts/feed/?type=for_you
+Authorization: Bearer {{access_token}}
+
+###
+POST http://localhost:8000/api/posts/create/
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "type": "red",
+  "content": "This is a test post!",
+  "person_id": 1
+}
+###
+POST http://localhost:8000/api/users/register/
+Content-Type: application/json
+
+{
+  "email": "testuser@example.com",
+  "password": "YourStrongPassword123",
+  "name": "Test User",
+  "date_of_birth": "2000-01-01",
+  "gender": "female",
+  "university": 1 
+}
+
+###
+POST http://localhost:8000/api/users/login/
+Content-Type: application/json
+
+{
+  "email": "testuser@example.com",
+  "password": "YourStrongPassword123"
+}
